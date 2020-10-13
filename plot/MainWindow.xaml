@@ -8,24 +8,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-    <Grid RenderTransformOrigin="0.537,0.508" >
-        <d3:Chart x:Name="pl" Margin="15,97,221,16" BottomTitle=" Horizontal Axis Label" LeftTitle="Vertical Axis Label" >
-            <Grid Name="GridPlot"/>
-
-
-
-
-
+    <Grid Background="Bisque">
+        <Grid.RowDefinitions>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <d3:Chart x:Name="pl"  BottomTitle=" Horizontal Axis Label" LeftTitle="Vertical Axis Label" Grid.ColumnSpan="3" Background="Bisque" Grid.Row="1">
+            <Grid Name="GridPlot" />
         </d3:Chart>
-
-
-
-
-
-
-
-        <ListBox x:Name="lis" Height="200" Width="200" Margin="581,191,11,28"/>
-        <ListBox x:Name="lis_Copy" Width="200" Margin="581,12,11,236"/>
-        <Button x:Name="But_Copy" Width="100" Margin="149,5,543,358" Click="But_Copy_Click" IsCancel="True"  />
+        <ListBox x:Name="lis"   Grid.Row="0"   Grid.Column="2" Background="Bisque" />
+        <ListBox x:Name="lis_Copy"   Grid.Row="0" Grid.Column="1" Background="Bisque" />
+        <Button x:Name="But_Copy" Width="100" Height="70" Click="But_Copy_Click" IsCancel="True" Grid.Row="0" Grid.Column="0"  Content="Старт" FontSize="24" Background="Purple"/>
     </Grid>
 </Window>
